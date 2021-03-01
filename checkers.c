@@ -976,7 +976,6 @@ void makeMove()
 
                             if(newRow == rowMax-1 || newCol == 0 || mustMove == true)
                             {
-                                //printf("\n A") ;
                                 Board[rowNum][colNum] = ' ' ;
                                 Board[newRow][newCol] = piece ; 
                                 moveMade = true ;
@@ -985,28 +984,24 @@ void makeMove()
                             {
                                 if((Board[newRow+1][newCol+1] != 'x' && Board[newRow+1][newCol+1] != 'X') && (Board[newRow+1][newCol-1] != 'x' && Board[newRow+1][newCol-1] != 'X'))
                                 {
-//                                   printf("\n B") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if(Board[newRow+1][newCol-1] == ' ' && Board[rowNum][colNum-2] != ' ' && Board[newRow+1][newCol+1] != ' ')
                                 {
-//                                    printf("\n C") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if((Board[newRow+1][newCol+1] != 'x' && Board[newRow+1][newCol+1] != 'X') && ((Board[newRow+1][newCol-1] == 'x' || Board[newRow+1][newCol-1] == 'X') && (colNum+1 <= colMax-1 && colNum-1 >= 0 && ((Board[rowNum-1][colNum+1] == 'o' || Board[rowNum-1][colNum+1] == 'O') || ((Board[rowNum-1][colNum-1] == 'o' || Board[rowNum-1][colNum-1] == 'O') && Board[rowNum+1][colNum+1] == ' ')))))
                                 {
-//                                    printf("\n D") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if((Board[newRow+1][newCol-1] != 'x' && Board[newRow+1][newCol-1] != 'X') && ((Board[newRow+1][newCol+1] == 'x' || Board[newRow+1][newCol+1] == 'X') && ((colNum-3 >= 0 && (Board[rowNum-1][colNum-3] == 'o' || Board[rowNum-1][colNum-3] == 'O') || ((Board[rowNum-1][colNum-1] == 'o' || Board[rowNum-1][colNum-1] == 'O') && Board[rowNum+1][colNum-3] == ' ')))))
                                 {
-//                                    printf("\n E") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
@@ -1020,7 +1015,6 @@ void makeMove()
 
                             if(newRow == 0 || newCol == colMax-1 || mustMove == true)
                             {
-//                                printf("\n F") ;
                                 Board[rowNum][colNum] = ' ' ;
                                 Board[newRow][newCol] = piece ; 
                                 moveMade = true ;
@@ -1029,14 +1023,12 @@ void makeMove()
                             {
                                 if((Board[newRow-1][newCol+1] != 'x' && Board[newRow-1][newCol+1] != 'X') && (Board[newRow-1][newCol-1] != 'x' && Board[newRow-1][newCol-1] != 'X'))
                                 {
-//                                    printf("\n G") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if(Board[newRow-1][newCol+1] == ' ' && Board[rowNum][colNum+2] != ' ' && Board[rowNum-2][colNum] != ' ')
                                 {
-//                                    printf("\n H") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
@@ -1053,7 +1045,6 @@ void makeMove()
 
                             if(newRow == rowMax-1 || newCol == colMax-1 || mustMove == true)
                             {
-//                                printf("\n I") ;
                                 Board[rowNum][colNum] = ' ' ;
                                 Board[newRow][newCol] = piece ; 
                                 moveMade = true ;
@@ -1062,28 +1053,24 @@ void makeMove()
                             {
                                 if((Board[newRow+1][newCol+1] != 'x' && Board[newRow+1][newCol+1] != 'X') && (Board[newRow+1][newCol-1] != 'x' && Board[newRow+1][newCol-1] != 'X'))
                                 {
-//                                    printf("\n J") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if(Board[newRow+1][newCol+1] == ' ' && Board[rowNum+2][colNum] != ' ' && Board[rowNum][colNum+2] != ' ')
                                 {
-//                                    printf("\n K") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if((Board[newRow+1][newCol-1] != 'x' && Board[newRow+1][newCol-1] != 'X') && (Board[newRow+1][newCol+1] == 'x' || Board[newRow+1][newCol+1] == 'X') && (rowNum-1 >= 0 && colNum-1 >= 0 && ((Board[rowNum-1][colNum-1] == 'o' || Board[rowNum-1][colNum-1] == 'O') || ((Board[rowNum-1][colNum+1] == 'o' || Board[rowNum-1][colNum+1] == 'O') && Board[rowNum+1][colNum-1] == ' '))))
                                 {
-//                                    printf("\n L") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if((Board[newRow+1][newCol+1] != 'x' && Board[newRow+1][newCol+1] != 'X') && ((Board[newRow+1][newCol-1] == 'x' || Board[newRow+1][newCol-1] == 'X') && (rowNum+3 <= rowMax-1 && ((Board[rowNum-1][colNum+3] == 'o' || Board[rowNum-1][colNum+3] == 'O') || ((Board[rowNum-1][colNum+1] == 'o' || Board[rowNum-1][colNum+1] ==  'O') && Board[rowNum+1][colNum+3] == ' ')))))
                                 {
-//                                    printf("\n M") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
@@ -1097,7 +1084,6 @@ void makeMove()
 
                             if(newRow == 0 || newCol == 0 || mustMove == true)
                             {
-//                                printf("\n N") ;
                                 Board[rowNum][colNum] = ' ' ;
                                 Board[newRow][newCol] = piece ; 
                                 moveMade = true ;
@@ -1106,14 +1092,12 @@ void makeMove()
                             {
                                 if((Board[newRow+1][newCol+1] != 'x' && Board[newRow+1][newCol+1] != 'X') && (Board[newRow+1][newCol-1] != 'x' && Board[newRow+1][newCol-1] != 'X'))
                                 {
-//                                    printf("\n O") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
                                 }
                                 else if(Board[newRow-1][newCol-1] == ' ' && Board[rowNum][colNum-2] != ' ' && Board[rowNum-2][colNum] != ' ')
                                 {
-//                                    printf("\n P") ;
                                     Board[rowNum][colNum] = ' ' ;
                                     Board[newRow][newCol] = piece ; 
                                     moveMade = true ;
